@@ -20,10 +20,10 @@ public class TestController {
     @PostMapping("/samples")
     public ResponseEntity createAMessage(@RequestBody MessageDto aDto) {
         Boolean result = sampleProducer.sendMessage(aDto);
-        
-        if(Boolean.TRUE.equals(result))
+
+        if (Boolean.TRUE.equals(result))
             return ResponseEntity.ok().build();
-        
+
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     }
 }
