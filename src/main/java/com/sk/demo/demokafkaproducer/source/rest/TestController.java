@@ -22,7 +22,7 @@ public class TestController {
         Boolean result = sampleProducer.sendMessage(aDto);
 
         if (Boolean.TRUE.equals(result))
-            return ResponseEntity.ok().build();
+            return ResponseEntity.accepted().build();
 
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     }
