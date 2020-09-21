@@ -1,0 +1,7 @@
+POST http://localhost:8080/samples
+Content-Type: application/json
+
+{
+    "key" : "djpaek24@sk.com",
+    "message" : "hello 002"
+}

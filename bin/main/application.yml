@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        producer-stream:
+          destination: test
+          producer:
+            partition-key-expression: headers['partitionKey']
+            partition-count: 3
+        consumer-stream:
+          destination: test
+          group: testConsumerGroup
+
