@@ -6,7 +6,6 @@ import org.springframework.messaging.MessageChannel;
 public interface SampleSource {
     String OUTPUT = "producer-stream";
 
-    
     @Output(SampleSource.OUTPUT)
     MessageChannel produce();
 }

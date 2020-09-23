@@ -14,8 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @EnableBinding(SampleSink.class)
-@Component
-public class SampleListener {
+public class SampleConsumer {
 
     @StreamListener(SampleSink.INPUT)
     public void handle(@Payload MessageDto aDto, @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition) {
